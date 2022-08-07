@@ -1,0 +1,27 @@
+
+BUILD AUTOMATION
+
+Intro:
+- Build Automation is the automation of tasks needed in order to process and prepare source code for deployment to production.
+  - Compiling
+  - Dependency Management
+  - Executing Automated Tests
+  - Packaging the App for Deployment
+
+- Build Automation Tool: GRADLE
+Installation:
+  - Download_URL: https://gradle.org/install/
+  - sudo mkdir /opt/gradle
+  - sudo unzip -d /opt/gradle ~/opt/gradle/gradle-5.7.1-bin.zip
+  - Config Gradle PATH
+    - sudo vim /etc/profile.d/gradle.sh
+        export PATH=$PATH ~/opt/gradle/gradle-5.7.1-bin/bin
+    - sudo chmod 755 /etc/profile.d/gradle.sh
+Verify Gradle Installation:
+  - gradle --version
+Install Gradle Wrapper:
+  - The Wrapper is a script that invokes a declared version of Gradle, downloading it beforehand if necessary.
+    - mkdir myProject
+    - cd myProject
+    - gradle wrapper
+    - ./gradlew build
